@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position property</title>
+    <!--USEAG OF RELATIVE AND ABSOLUTE PROPERTY TOGETHER-->
+    <style>
+        #parent 
+    {
+        border: 3px  blue solid;
+        height: 400px;
+        width: 600px;
+        margin: 30px auto;                 /* 0px means will not move from top and bottom and auto for covering the extra space for letting it in the centre */
+        position: relative;
+    }
+    #child
+    {
+         background-color: rgb(146, 225, 236);
+         height: 100px;
+         width: 100px;
+         position: absolute;
+         left: 30px;
+    }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="child"></div>
+    </div>
+</body>
+</html>

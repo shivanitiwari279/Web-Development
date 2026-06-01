@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        /* "Justify-content" is onlu worlk along X-aixs and for Y-axis we use "Align-items"  */
+        #Parent
+        {
+            height: 500px;
+            width: 100vw;
+            border: 3px rgb(43, 45, 138) solid;
+            display: flex;
+            /* justify-content: center; */
+            /* justify-content: end; */
+            justify-content: space-around;
+            /* justify-content: space-between; */
+            /* justify-content: space-evenly; */
+            /* align-items: center; */
+            /* justify-content: center; 
+             align-items: center; */
+        }
+        #Parent div{
+            height: 100px;
+            width: 100px;
+        }
+        #Parent div:nth-last-of-type(odd)
+        {
+            background-color: rgb(139, 227, 227);
+        }
+        #Parent div:nth-last-of-type(even)
+        {
+            background-color: rgb(31, 121, 121);
+        }
+    </style>
+</head>
+<body>
+    <div id="Parent">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

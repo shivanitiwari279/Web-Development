@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Page</title>
+    <style>
+        body
+        {
+             background: linear-gradient(to bottom, rgb(140, 199, 244),rgb(237, 247, 252));
+             height: 100vh;
+        }
+        h1
+        {
+            text-align: center;
+            color: rgb(233, 59, 117);
+            font-size: 52px;
+            animation-name: shift;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: 1;
+        }
+        @keyframes shift {
+            0%{
+                transform: translateX();
+            }
+            
+        }
+        #sun
+        {
+           background:linear-gradient(to right,rgb(242, 83, 14),rgb(233, 205, 94));
+           height: 100px;
+           width: 100px;
+           border-radius: 50%;
+           position: absolute;
+           top: 50px;
+           right: 50px;
+           animation-name: sun;
+           animation-duration: 5s;
+           animation-iteration-count: infinite;
+           animation-timing-function: ease-in;
+        }
+        @keyframes sun {
+            0%
+            {
+                transform: rotate(0deg);
+            }
+            100%
+            {
+                transform:  rotate(360deg);
+            }
+        }
+        .footer 
+         {
+            background-color: rgb(16, 196, 16);
+            height: 120px;
+            width: 100vw;
+            position: absolute;
+            bottom: 0px;
+            margin: 0px;
+            padding: 0px;
+        }
+         #balloon1
+         {
+            height: 140px;
+            width: 100px;
+            border-radius: 70%;
+            background-color: red;
+            position: absolute;
+            left: 20px;
+            animation-name: balloon1;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+         }
+        #balloon2
+        {
+            height: 140px;
+            width: 100px;
+            background-color: yellow;
+            border-radius: 70%;
+            position: relative;
+            left:30%;
+            animation-name: balloon1;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+        }
+        #balloon3
+        {
+            height: 140px;
+            width: 100px;
+            border-radius: 70%;
+            position: relative;
+            left: 45%;
+            animation-name: balloon1;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in; 
+           background-color: purple;
+           animation-duration: 5s;
+        }
+        #balloon4
+        {
+           height: 140px;
+            width: 100px;
+            border-radius: 70%;
+            position: relative;
+            left: 60%;
+            animation-name: balloon1;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in; 
+           background-color: blue;
+           animation-duration: 5s;
+         
+        }
+        #balloon5
+        {
+            height: 140px;
+            width: 100px;
+            border-radius: 70%;
+            position: relative;
+            left: 80%; 
+            animation-name: balloon1;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+           animation-duration: 6s;
+           background-color: green; 
+        }
+        .tail::after {
+            content: "";
+            position: absolute;
+            bottom: -75px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 75px;
+            background: #555;
+            border-radius: 2px;
+        }
+         @keyframes balloon1 {
+            0%
+            {
+                transform: translateY(600px);
+                
+            }
+            100%
+            {
+                transform: translateY(-879px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>🎉Welcome to Ballon Festival🎈</h1>
+    <div id="sun"></div>
+    <div id="balloon">
+        <div class="tail" id="balloon1"></div>
+        <div class="tail" id="balloon2"></div>
+        <div class="tail" id="balloon3"></div>
+        <div class="tail" id="balloon4"></div>
+        <div class="tail" id="balloon5"></div>
+    </div>
+    <div class="footer"></div>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lovable App</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: cursive;
+            box-sizing: border-box;
+        }
+        body
+        {
+            background-color: rgb(239, 239, 223);
+            height: 100vh;
+            overflow-x:hidden;
+        }
+        #head
+        {
+            height: 80px;
+            background: linear-gradient(to right,#b83fe0 ,#f448ad);
+            cursor: pointer;
+            top: 0px;
+            position: sticky;
+            z-index: 13;
+        }
+        #about
+        {
+            border-radius: 22px;
+            height: 195px;
+            margin: 60px;
+            padding: 30px;
+            flex-direction: column;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            background: linear-gradient(to right,#b83fe0 ,#f448ad);
+            cursor: pointer;
+            color: white;
+        }
+        a{
+            font-weight: 900;
+            color: rgb(255, 241, 165);
+        }
+        h1{
+            font-size: 40px;
+        }
+        #p1
+        {
+            color: #e8e6e6;
+            font-size: 18px;
+            width: 600px;
+        }
+        .lower
+        {
+            position: absolute;
+            bottom: 5px;
+            left: 10px;
+            font-size: 40px;
+            opacity: 0.2;
+        }
+        .side_tag
+        {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 60px;
+            opacity: 0.2;
+        }
+        #achivement
+        {
+                display: flex;
+                justify-content: space-evenly;
+                align-items:center ;
+                flex-wrap: wrap;
+                align-content: space-between;
+                transition: 1s;
+        }
+        .progress
+        {
+             background-color: white;
+             height: 140px;
+             width: 320px;
+             box-shadow:rgba(0, 0, 0, 0.10) 0px 30px 40px,rgba(0, 0, 0, 0.04) 0px -9px 18px,rgba(0, 0, 0, 0.04) 0px 2px 4px,rgba(0, 0, 0, 0.06) 0px 8px 10px,rgba(0, 0, 0, 0.03) 0px -2px 3px;
+             border-radius: 22px;
+             padding: 25px;
+             flex-direction: column;
+             display:flex ;
+             justify-content: center;
+             align-items:center ;
+             cursor: pointer;
+             transition: transform 1s ease-out;
+        }
+        .icon
+        {
+            font-size: 30px;
+        }
+        #p2
+        {
+            font-size: 14px;
+            color: rgb(98, 97, 97);
+        }
+        #h1{
+            position: relative;
+            top: 40px;
+            left: 60px;
+        }
+        #assignments
+        {
+             padding: 60px;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             flex-wrap: wrap;
+             gap: 20px;
+        }
+         .subjects
+        {
+             background-color: white;
+             height: 200px;
+             width: 30%;
+             box-shadow:rgba(0, 0, 0, 0.10) 0px 30px 40px,rgba(0, 0, 0, 0.04) 0px -9px 18px,rgba(0, 0, 0, 0.04) 0px 2px 4px,rgba(0, 0, 0, 0.06) 0px 8px 10px,rgba(0, 0, 0, 0.03) 0px -2px 3px;
+             border-radius: 16px;
+             display:flex ;
+             justify-content: center;
+             align-items:center ;
+             cursor: pointer;
+             transition: transform 1s ease-out;
+        } 
+
+        #closing_tag
+        {
+            border-radius: 22px;
+            height: 160px;
+            margin: 30px 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right,#ffa143 ,#df6508);
+        }
+        .detail
+        {
+            color: white;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .stars {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .star {
+            font-size: 25px;
+        }
+
+        .star.big {
+            font-size: 30px;
+            transform: translateY(-6px);
+        }
+
+        #footer
+        {
+            margin: 0px;
+            padding: 0px;
+            height: 160px;
+            color: white;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right,#4fd1c5 ,#1084f8);
+           
+        }
+        .context1
+        {
+             position: absolute;
+             top: 35px;
+             left: 60px;
+        }
+        .context2
+        {
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            
+        }
+        .inside
+        {
+                gap: 60px;
+                transition: 1s;
+        }
+        .C2-2
+        {  
+                width: 400px;
+                gap: 20px;
+                font-size: 30px;
+        }
+        .context3
+        {
+            position: absolute;
+            top: 35px;
+            right: 60px;
+        }
+        .progress:hover{
+            animation: bigJump 0.4s ease-out forwards;
+           }
+           @keyframes bigJump{
+           0% {
+            transform:scale(1);
+           }
+           10%{
+            transform:scale(1.0) translateY(-15px);
+           }
+        }
+         .subjects:hover{
+            animation: bigJump 0.4s ease-out forwards;
+           } 
+           @keyframes bigJump{
+           0% {
+            transform:scale(1);
+           }
+           10%{
+            transform:scale(1.0) translateY(-15px);
+           }
+        }
+        .inside:hover
+        {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div id="head"></div>
+    <div id="about">
+        <h3>Welcome back!</h3>
+        <h1>Hey Champ! Ready to Learn?🌟</h1>
+        <p id="p1">You have <a>3 new assignments</a> waiting for you. Let's make today awesome!</p>
+        <span class="lower">✨</span>
+        <span class="side_tag">📚</span>
+    </div>
+    <div id="achivement">
+        <div class="progress" id="one">
+            <span class="icon">📋</span>
+            <h1>6</h1>
+            <p id="p2">Total</p>
+        </div>
+        <div class="progress" id="two">
+            <span class="icon">✅</span>
+            <h1>1</h1>
+            <p id="p2">Completed</p>
+        </div>
+        <div class="progress" id="three">
+            <span class="icon">🚀</span>
+            <h1>2</h1>
+            <p id="p2">In Progress</p>
+        </div>
+        <div class="progress" id="four">
+            <span class="icon">⭐</span>
+            <h1>150</h1>
+            <p id="p2">Points</p>
+        </div>
+    </div>
+    <div id="h1"><h1>My Assignment</h1></div>
+    <div id="assignments">
+        <div class="subjects" id="first"></div>
+        <div class="subjects" id="second">2</div>
+        <div class="subjects" id="third">3</div>
+        <div class="subjects" id="fourth">4</div>
+        <div class="subjects" id="fifth">5</div>
+        <div class="subjects" id="sixth">6</div>
+ </div>
+    <div id="closing_tag">
+        <div class="detail">
+            <div class="stars">
+            <span class="star">⭐</span>
+            <span class="star big">⭐</span>
+            <span class="star">⭐</span>
+            </div>
+            <h2 id="text1">You're doing amazing! 🎉</h2>
+            <p id="text2">Complete 2 more assignments to unlock a special badge!</p>
+        </div>
+    </div>
+    <div id="footer">
+        <h3 class="context1">Keep Learning, Keep Growing!</h3>
+        <div class="context2">
+            <div class="C2-1">
+                <span class="inside">🏠Home</span> 
+                <span class="inside">📖Help </span>
+                <span class="inside">⭐Rewards</span>
+            </div>
+            <div class="C2-2">
+                <span>🌟</span>
+                <span>🎨</span>
+                <span>📚</span>
+                <span>🎯</span>
+                <span>🏆</span>
+            </div>
+        </div>
+        <div class="context3">Made with 🤍 for Kids © 2024</div>
+    </div>
+</body>
+</html>

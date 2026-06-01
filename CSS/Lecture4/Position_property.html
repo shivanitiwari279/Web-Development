@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position property</title>
+    <style>
+        div
+        {
+            display: inline-block;
+            height: 200px;
+            width: 200px;
+        }
+        /* Static position provide the static position*/        
+        #one
+        {
+            text-align: center;
+            background-color: rgb(207, 41, 41);
+            /* position: static;   */      
+        }
+        /* Relative position change the position of block from its initiate position*/
+         /* Fixed position fix the position of block from its initiate position*/
+        #two
+        {
+            text-align: center;
+            background-color: rgb(62, 228, 62);
+            /* position: relative;         
+            top: 200px;
+            left: 100px; */
+            position: fixed;
+            
+        }
+        /* Absolute position change the position of block from its parents position
+           (from the screen as its has 8px distance from screen)*/
+        #three
+        {
+            text-align: center;
+            background-color: rgb(72, 72, 153);
+            /* position: absolute;         
+            top: 6px; */
+        }
+    </style>
+</head>
+<body>
+    <div id="one">Red</div>
+    <div id="two">green</div>
+    <div id="three">Blue</div>
+    <p>Lorem ipsum, dolor sit amet consectetur Neque dicta illo beatae consequuntur ipsum, magnam dolore placeat.
+     Maiores veniam voluptatibus explicabo illo nostrum, adipisci ipsa animi eum quo ratione iure aspernatur.</p>
+</body>
+</html>

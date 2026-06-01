@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Weather</title>
+    <style>
+    body{
+    margin:0;
+    padding:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(to right,#4facfe,#00f2fe);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.container{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    width:320px;
+    height: 500px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+    background-image:url("https://tse3.mm.bing.net/th/id/OIP._hIfERr6e5nM5jOoUbPZIAHaGt?pid=Api&P=0&h=180");
+    
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+input{
+    width:80%;
+    position: relative;
+    top: 60%;
+    padding:12px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    font-size:16px;
+    background:#f1f1f1;
+}
+
+button{
+    margin-top:100%;
+    padding:10px 20px;
+    border:none;
+    border-radius:10px;
+    background:#4facfe;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#007bff;
+}
+
+#list{
+    margin-top:20px;
+}
+
+#list h2{
+    margin-bottom:10px;
+    color:#333;
+}
+
+#list h3{
+    margin:8px 0;
+    color:#555;
+}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+    <input type="text" placeholder="Enter city">
+
+    <button>Search</button>
+
+    <div id="list"></div>
+
+    <script src="index1.js"></script>
+
+</div>
+</body>
+</html>

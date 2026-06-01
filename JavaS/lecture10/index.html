@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <style>
+        body{
+            background-color: rgb(43, 45, 119);
+        }
+        #container
+        {
+            background-color: white;
+            position: relative;
+            top: 50px;
+            left: 400px;
+            height: 600px;
+            width: 520px;
+            border-radius: 2%;
+        }
+        #scr{
+            position: absolute;
+            margin: 8px;
+            left: 15px;
+        }
+        #timer{
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
+            
+        }
+        #questionNum{
+            color: rgb(170, 160, 160);
+        }
+
+        h1{
+            text-align: center;
+        }
+        h3{
+            text-align: center;
+            color: white;
+        }
+        #score{
+            background-color: rgb(246, 215, 246);
+            height: 35px;
+            width: 440px;
+            position: absolute;
+            top: 80px;
+            left: 30px;
+            border-radius: 8px;
+        }
+        #heading{
+            position: absolute;
+            top: 120px;
+            left: 30px;
+        }
+        #options{
+            height: 40px;
+            width: 300px;
+            position: absolute;
+            top: 240px;
+            left: 30px;
+        }
+        #btn{
+                height: 50px;
+                width: 440px;
+                position: absolute;
+                bottom: 30px;
+                left: 30px;
+                background-color: rgb(72, 62, 119);
+                border-radius: 10px;
+        }
+        .opt{
+                height: 40px;
+                width: 440px;
+                display: grid;
+                display:grid;
+                grid-template-columns:repeat(3,120px);
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+                margin-top:20px;
+                border-radius: 10px;
+        }
+    </style>
+</head>
+<body> 
+    <div id="container">
+        <h1>🧠Quize time!</h1>
+
+        <div id="score">
+            <span id="scr">Score</span>
+            <span id="timer">⏱️</span>
+        </div>
+
+        <div id="heading">
+            <p id="questionNum">Qestions 1 of 5</p>
+            <h2 id="question">HTML ka full form kya hai?</h2>
+        </div>
+        
+        <div id="options">
+          <button class="opt">1</button>
+          <button class="opt">2</button>
+          <button class="opt">3</button>
+          <button class="opt">4</button>
+        </div>
+        <div>
+            <button id="btn" onclick="nextQuestion()" disabled><h3>Next question</h3></button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

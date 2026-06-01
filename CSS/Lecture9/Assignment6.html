@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumping Ball</title>
+    <style>
+        body{
+            background-color: rgb(255, 237, 202);
+
+        }
+        .ball1{
+           background:linear-gradient(to right,rgb(207, 2, 2),rgb(251, 196, 196));
+           height: 100px;
+           width: 100px;
+           border: 3px solid;
+           border-radius: 50%;
+           margin:10px 50px;
+           animation-name: any;
+           animation-duration: 0.9s;
+           animation-iteration-count: infinite;
+           animation-direction: alternate;
+           animation-timing-function: ease-in;
+        }
+        .ball2{
+           background:linear-gradient(to right,rgb(113, 2, 161),rgb(240, 186, 254));
+           height: 100px;
+           width: 100px;
+           border: 3px solid;
+           border-radius: 50%;
+           margin: auto;
+           animation-name: ball;
+           animation-duration: 0.7s;
+           animation-iteration-count: infinite;
+           animation-direction: alternate;
+           animation-timing-function: ease-in;
+        }
+        
+        @keyframes any {
+            0%{
+                transform: translateY(0px)
+            }
+            100%{
+                transform: translateY(85vh) rotate(360deg);
+            }
+        }
+         @keyframes ball {
+            0%{
+                transform: translateY(0px)
+            }
+            100%{
+                transform: translateY(95vh) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ball1"></div>
+    <div class="ball2"></div>
+</body>
+</html>

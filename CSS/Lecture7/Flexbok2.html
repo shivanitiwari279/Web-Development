@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: rgb(235, 114, 135);
+        }
+        .container
+        {
+            background-color: white;
+            height: 400px;
+            border: 2px solid;
+            padding: 18px;
+            margin: 2px;
+            display: flex;
+            justify-content: space-around;
+            align-items:center ;
+            flex-wrap: wrap;
+            align-content: space-between;
+            gap: 50px;
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            color: white;
+            font-size: 20px;
+            background-color: rgb(71, 114, 170);
+            display:flex ;
+            justify-content: center;
+            align-items:center ;
+        }
+         h1{
+            text-align: center
+         }
+         #one
+         {
+            /* flex-basis: 1; */
+            flex-grow: 1;
+            /* flex-shrink: 2; */
+         }
+         #two
+          {
+            /* flex-basis: 2; */
+            flex-grow: 2;
+            /* flex-shrink: 2;  */
+         }
+    </style>
+</head>
+<body>
+    <h1>Flexbox Parent Properties Demo</h1>
+    <div class="container">
+        <div class="box" id="one">1</div>
+        <div class="box" id="two">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+    </div>
+</body>
+</html>
